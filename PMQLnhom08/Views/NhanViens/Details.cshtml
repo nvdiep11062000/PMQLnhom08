@@ -1,0 +1,35 @@
+﻿@model PMQLnhom08.Models.NhanVien
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NhanVien</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IDNv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDNv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressNv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressNv)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NameNv }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

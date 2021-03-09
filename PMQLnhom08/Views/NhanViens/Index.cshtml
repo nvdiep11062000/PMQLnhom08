@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PMQLnhom08.Models.NhanVien>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách nhân viên </h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <lable>Tên nhân viên</lable>
+        </th>
+        <th>
+            <lable>ID nhân viên</lable>
+        </th>
+        <th>
+            <lable>Địa chỉ</lable>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.NameNv)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IDNv)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AddressNv)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.NameNv }) |
+        @Html.ActionLink("Details", "Details", new { id = item.NameNv }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.NameNv })
+    </td>
+</tr>
+}
+
+</table>
